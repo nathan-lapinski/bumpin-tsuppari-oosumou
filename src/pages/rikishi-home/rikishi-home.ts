@@ -20,4 +20,8 @@ export class RikishiHomePage {
     console.log('ionViewDidLoad RikishiHomePage');
   }
 
+  goHome(): void {
+    //this.navCtrl.push(MyRikishiPage);
+    this.navCtrl.popToRoot();
+  }
 }
