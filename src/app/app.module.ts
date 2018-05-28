@@ -7,11 +7,19 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyRikishiPage } from '../pages/my-rikishi/my-rikishi';
+import { MatchPage } from '../pages/match/match';
+import { RikishiDetailPage } from '../pages/rikishi-detail/rikishi-detail';
+import { BashoPage } from '../pages/basho/basho';
+import { RikishiPage } from '../pages/rikishi/rikishi';
 
 @NgModule({
   declarations: [
     MyApp,
-    MyRikishiPage
+    MyRikishiPage,
+    MatchPage,
+    RikishiDetailPage,
+    BashoPage,
+    RikishiPage
   ],
   imports: [
     BrowserModule,
@@ -20,7 +28,10 @@ import { MyRikishiPage } from '../pages/my-rikishi/my-rikishi';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    MyRikishiPage
+    MyRikishiPage,MatchPage,
+    RikishiDetailPage,
+    BashoPage,
+    RikishiPage
   ],
   providers: [
     StatusBar,
