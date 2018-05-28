@@ -15,4 +15,8 @@ export class BashoPage {
     console.log('ionViewDidLoad BashoPage');
   }
 
+  navigate(): void {
+    this.navCtrl.pop();
+  }
+
 }
