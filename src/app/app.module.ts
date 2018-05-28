@@ -11,6 +11,8 @@ import { MatchPage } from '../pages/match/match';
 import { RikishiDetailPage } from '../pages/rikishi-detail/rikishi-detail';
 import { BashoPage } from '../pages/basho/basho';
 import { RikishiPage } from '../pages/rikishi/rikishi';
+import { RikishiHomePage } from '../pages/rikishi-home/rikishi-home';
+import { RankingsPage } from '../pages/rankings/rankings';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RikishiPage } from '../pages/rikishi/rikishi';
     MatchPage,
     RikishiDetailPage,
     BashoPage,
-    RikishiPage
+    RikishiPage,
+    RikishiHomePage,
+    RankingsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { RikishiPage } from '../pages/rikishi/rikishi';
     MyRikishiPage,MatchPage,
     RikishiDetailPage,
     BashoPage,
-    RikishiPage
+    RikishiPage,
+    RikishiHomePage,
+    RankingsPage
   ],
   providers: [
     StatusBar,

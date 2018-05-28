@@ -1,0 +1,13 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{rikishi.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-tabs>
+  <ion-tab tabTitle="Rikishi" [root]="rikishiDetailTab" [rootParams]="rikishi" tabIcon="basketball"></ion-tab>
+  <ion-tab tabTitle="Rankings" [root]="rankingsTab" [rootParams]="rikishi" tabIcon="podium"></ion-tab>
+</ion-tabs>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { RikishiDetailPage } from '../rikishi-detail/rikishi-detail';
+import { RikishiHomePage } from '../rikishi-home/rikishi-home';
 
 @Component({
   selector: 'page-rikishi',
@@ -22,7 +22,7 @@ export class RikishiPage {
   }
 
   itemTapped($event, rikishi): void {
-    this.navCtrl.push(RikishiDetailPage, rikishi);
+    this.navCtrl.push(RikishiHomePage, rikishi);
   }
 
 }
