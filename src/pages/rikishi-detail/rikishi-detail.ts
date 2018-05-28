@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the RikishiDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-rikishi-detail',
   templateUrl: 'rikishi-detail.html',
 })
 export class RikishiDetailPage {
 
+  public rikishi: any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.rikishi = this.navParams.data;
+    console.log('nav params', this.navParams);
   }
 
   ionViewDidLoad() {

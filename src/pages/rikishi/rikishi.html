@@ -8,10 +8,8 @@
 
 
 <ion-content>
-  <button ion-item (click)="itemTapped()">
-    Hakuhou (白鵬)
+  <button *ngFor="let rikishi of rikishis" ion-item (click)="itemTapped($event, rikishi)">
+    {{rikishi.name}}
   </button>
-  <button ion-item (click)="itemTapped()">
-    Kakuryuu（鶴竜）
-  </button>
+  
 </ion-content>

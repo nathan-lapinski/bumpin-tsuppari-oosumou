@@ -8,6 +8,12 @@ import { RikishiDetailPage } from '../rikishi-detail/rikishi-detail';
 })
 export class RikishiPage {
 
+  public rikishis = [
+    { id: 1, name: 'Hakuhou' },
+    { id: 1, name: 'Kakuryuu' },
+    { id: 1, name: 'Kisenosato' }
+  ];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -15,8 +21,8 @@ export class RikishiPage {
     console.log('ionViewDidLoad RikishiPage');
   }
 
-  itemTapped(): void {
-    this.navCtrl.push(RikishiDetailPage);
+  itemTapped($event, rikishi): void {
+    this.navCtrl.push(RikishiDetailPage, rikishi);
   }
 
 }
