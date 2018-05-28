@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RikishiPage } from '../rikishi/rikishi';
 
 @IonicPage()
 @Component({
@@ -15,8 +16,8 @@ export class BashoPage {
     console.log('ionViewDidLoad BashoPage');
   }
 
-  navigate(): void {
-    this.navCtrl.pop();
+  itemTapped(): void {
+    this.navCtrl.push(RikishiPage);
   }
 
 }

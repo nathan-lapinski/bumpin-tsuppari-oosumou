@@ -1,13 +1,19 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>basho</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Select a Basho</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
-  <button ion-button (click)="navigate()">Back</button>
+<ion-content>
+  <ion-list>
+    <button ion-item (click)="itemTapped()">
+      Nagoya Basho (July 2018)
+    </button>
+    <button ion-item (click)="itemTapped()">
+      Tokyo Basho (September 2018)
+    </button>
+  </ion-list>
 </ion-content>

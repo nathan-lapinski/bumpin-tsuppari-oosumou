@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the RikishiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { RikishiDetailPage } from '../rikishi-detail/rikishi-detail';
 
 @Component({
   selector: 'page-rikishi',
@@ -19,6 +13,10 @@ export class RikishiPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RikishiPage');
+  }
+
+  itemTapped(): void {
+    this.navCtrl.push(RikishiDetailPage);
   }
 
 }
