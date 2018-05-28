@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MyRikishiPage } from '../pages/my-rikishi/my-rikishi';
+import { BashoPage } from '../pages/basho/basho';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,5 +37,14 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  // Page navigation methods
+  goHome(): void {
+    this.nav.push(MyRikishiPage);
+  }
+
+  goToBasho(): void {
+    this.nav.push(BashoPage);
   }
 }
