@@ -21,7 +21,6 @@ export class RikishiHomePage {
   }
 
   goHome(): void {
-    //this.navCtrl.push(MyRikishiPage);
     this.navCtrl.popToRoot();
   }
 }
