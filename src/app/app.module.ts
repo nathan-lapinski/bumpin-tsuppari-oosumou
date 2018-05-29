@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 
@@ -13,6 +14,7 @@ import { BashoPage } from '../pages/basho/basho';
 import { RikishiPage } from '../pages/rikishi/rikishi';
 import { RikishiHomePage } from '../pages/rikishi-home/rikishi-home';
 import { RankingsPage } from '../pages/rankings/rankings';
+import { TsuppariApiProvider } from '../providers/tsuppari-api/tsuppari-api';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { RankingsPage } from '../pages/rankings/rankings';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -42,7 +45,8 @@ import { RankingsPage } from '../pages/rankings/rankings';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TsuppariApiProvider
   ]
 })
 export class AppModule {}

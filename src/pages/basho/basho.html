@@ -9,11 +9,8 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item (click)="itemTapped()">
-      Nagoya Basho (July 2018)
-    </button>
-    <button ion-item (click)="itemTapped()">
-      Tokyo Basho (September 2018)
+    <button ion-item  *ngFor="let basho of bashos" (click)="itemTapped($event, basho)">
+      {{basho.name}}
     </button>
   </ion-list>
 </ion-content>
