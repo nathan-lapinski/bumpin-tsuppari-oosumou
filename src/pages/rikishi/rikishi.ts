@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { RikishiHomePage } from '../rikishi-home/rikishi-home';
+import { TsuppariApiProvider } from '../../providers/tsuppari-api/tsuppari-api';
 
 @Component({
   selector: 'page-rikishi',
@@ -8,17 +9,20 @@ import { RikishiHomePage } from '../rikishi-home/rikishi-home';
 })
 export class RikishiPage {
 
-  public rikishis = [
-    { id: 1, name: 'Hakuhou' },
-    { id: 1, name: 'Kakuryuu' },
-    { id: 1, name: 'Kisenosato' }
-  ];
+  public rikishis = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private tsuppariApi: TsuppariApiProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RikishiPage');
+    const currentBasho: string = this.navParams.data.id;
+    console.log(currentBasho);
+    this.tsuppariApi.getBashoData(currentBasho).subscribe(data => {
+      console.log(data);
+      this.rikishis = data.rikishi;
+    });
   }
 
   itemTapped($event, rikishi): void {
